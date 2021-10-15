@@ -1,0 +1,26 @@
+pragma solidity 0.8.9; 
+contract CompraeVenda {
+    string nome_vendedor;
+    string nome_comprador;
+    string matricula;
+    string cartorio;
+    string data_de_vencimento;
+    bool quitado = false;
+    uint public ValorTotal = 10000;
+    uint public ValorDaEntrada;
+    uint public ValorEmAberto;
+    uint public ValorDaParcela;
+    uint QuantidadeDeParcelas;
+    uint PorcetagemDaMulta;
+    
+        function PagarEntrada(uint _valorPagamento) public returns(uint, string memory) {
+            ValorDaEntrada = _valorPagamento;
+            ValorEmAberto = ValorTotal - _valorPagamento;
+            returns(ValorEmAberto, "valor em aberto");
+            
+    
+    
+    
+        }   
+    
+}
